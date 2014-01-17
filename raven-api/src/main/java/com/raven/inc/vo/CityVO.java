@@ -6,6 +6,8 @@ public class CityVO {
 	private String name;
 	private String code;
 	private Long stateId;
+	
+	
 	public Long getId() {
 		return id;
 	}
