@@ -46,9 +46,9 @@ public class RavenUserDAO implements IRavenUserDAO {
 									Sql , Statement.RETURN_GENERATED_KEYS);
 							
 							ps.setString(1,ravenUserVO.getRavenId());
-							ps.setString(2, ravenUserVO.getFirstName());
-							ps.setString(3, ravenUserVO.getMiddleName());
-							ps.setString(4, ravenUserVO.getLastName());
+							ps.setString(2, ravenUserVO.getName().getFirstName());
+							ps.setString(3, ravenUserVO.getName().getMiddleName());
+							ps.setString(4, ravenUserVO.getName().getLastName());
 							ps.setString(5, ravenUserVO.getCellNo());
 							ps.setString(6, ravenUserVO.getEmailId());
 							//ps.setString(7, ravenUserVO.getDob());///  date

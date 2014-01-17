@@ -10,12 +10,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.stereotype.Service;
 
 import com.mysql.jdbc.Connection;
 import com.raven.inc.dao.IRavenFbDAO;
 import com.raven.inc.vo.RavenFbVO;
 import com.raven.inc.vo.RavenUserVO;
-
+@Service
 public class RavenFbDAO implements IRavenFbDAO {
 	protected JdbcTemplate jdbcTemplate;
 
