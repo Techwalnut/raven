@@ -1,5 +1,6 @@
 package com.raven.inc.controller;
 
+import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,10 +18,20 @@ public class FBUserController {
 	@Autowired
 	FBUserService fbUserService;
 
-	@RequestMapping(value = "/savefbuser", method = RequestMethod.POST)
-	public @ResponseBody String saveFbUser(@RequestParam RavenUserVO ravenUserVO) {
-		//System.out.println("********Controller" + id);
-		fbUserService.saveFbser(ravenUserVO);
+	@RequestMapping(value = "/savefbuser", method = RequestMethod.POST)//, headers = {"Content-type=application/json"})
+	public @ResponseBody String saveFbUser(@RequestParam String id) {
+		System.out.println("********Controller " + id);
+		
+		try{
+			ObjectMapper mapper = new ObjectMapper();
+			RavenUserVO ravenUserVO = mapper.readValue(id, RavenUserVO.class);	
+			System.out.println("ravenUserVO " + ravenUserVO.toString());
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		//fbUserService.saveFbser(ravenUserVO);
 		return "success";
 	}
 	
