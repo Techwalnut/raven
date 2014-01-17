@@ -1,6 +1,7 @@
 package com.raven.inc.vo;
 
 import java.util.Date;
+import java.util.List;
 
 public class RavenUserVO {
 	
@@ -15,6 +16,9 @@ public class RavenUserVO {
 	private String status;
 	private Date createdDate;
 	private Date modifiedDate;
+	private List<RavenFbVO> fbVOs;
+	private String accountType;
+	
 	public long getId() {
 		return id;
 	}
@@ -81,6 +85,18 @@ public class RavenUserVO {
 	public void setModifiedDate(Date modifiedDate) {
 		this.modifiedDate = modifiedDate;
 	}
+	public void setFbVOs(List<RavenFbVO> fbVOs) {
+		this.fbVOs = fbVOs;
+	}
+	public List<RavenFbVO> getFbVOs() {
+		return fbVOs;
+	}
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
+	}
+	public String getAccountType() {
+		return accountType;
+	}
 	@Override
 	public String toString() {
 		return "RavenUserVO [id=" + id + ", ravenId=" + ravenId
@@ -88,7 +104,8 @@ public class RavenUserVO {
 				+ ", lastName=" + lastName + ", cellNo=" + cellNo
 				+ ", emailId=" + emailId + ", dob=" + dob + ", status="
 				+ status + ", createdDate=" + createdDate + ", modifiedDate="
-				+ modifiedDate + "]";
+				+ modifiedDate + ", fbVOs=" + fbVOs + ", accountType="
+				+ accountType + "]";
 	}
 	
 	
