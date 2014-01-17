@@ -15,6 +15,7 @@ local.properties
 .classpath
 .settings/
 .loadpath
+traget/
 
 # External tool builders
 .externalToolBuilders/
