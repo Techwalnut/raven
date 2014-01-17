@@ -16,13 +16,14 @@ import com.raven.inc.vo.RavenUserVO;
 public class FBUserManager {
 	@Autowired
 	IRavenUserDAO ravenUserDAO;
+	
 	@Autowired
 	IRavenFbDAO ravFbDAO;
 	
 
-public RavenUserVO saveFbUser(RavenUserVO ravenUserVO) {
+	public RavenUserVO saveFbUser(RavenUserVO ravenUserVO) {
 		
-	System.out.println("********Manager");
+		System.out.println("********Manager");
 	     int userCount=ravenUserDAO.isUserExist(ravenUserVO);
 	     if(userCount==0)
 	     {
@@ -49,7 +50,7 @@ public RavenUserVO saveFbUser(RavenUserVO ravenUserVO) {
 	          
 	     }
 	     return ravenUserVO;
-		
+	
 	}
 		
 }
