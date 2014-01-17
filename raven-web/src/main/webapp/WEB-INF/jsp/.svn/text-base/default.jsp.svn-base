@@ -1,0 +1,90 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
+<%@ page  language="java" import="com.vistasoftwares.speedoc.uninor.dmsreport.util.RolesEnum"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title>Speedoc</title>
+
+<link href="<c:url value="/styles/uninor/style.css" />" rel="stylesheet" type="text/css" />
+<c:url var="imageUrl" value="/images/uninor/" />
+
+
+</head>
+<body>
+
+<sec:authorize ifAllGranted="ROLE_ADMIN">
+		
+	<div id="wrapper">
+
+		
+	<%@ include file="headerRP.jsp" %> 
+	
+    <div id="int-container">
+    	<div class="cbox-top"><span></span></div>
+         <div class="cbox-cont">
+        	<h2>Welcome to SpeeDOC.</h2>
+            <div class="content">
+                <form action="" method="get">
+                    <p><label>&nbsp;</label></p>
+                    <p><label>&nbsp;Welcome to SpeeDOC.</label></p>
+                    <div class="cbox-foot">
+
+                    </div>
+                </form>
+            </div>                     
+        </div>
+      <div class="cbox-bottom"><span></span></div>
+  </div><!-- End: Container -->
+</div><!-- End Wrapper -->
+
+<div id="int-bottom"><span></span></div><!-- End: Content Bottom -->
+</sec:authorize>
+
+
+
+<sec:authorize ifNotGranted="ROLE_ADMIN">
+ <div id="wrapper">
+
+
+	<div id="top">
+			<div class="logo"><img src="${imageUrl}logo.jpg" alt="Reliance" title="Reliance" width="150" height="37" /></div><!-- End: Logo -->
+	        <div class="logout">
+			 </div>
+	  		<div id="nav">
+	        	<ul>
+	            </ul>
+	        </div><!-- End: Top Navigation -->
+	</div>
+
+    <div id="int-container">
+    	<div class="cbox-top"><span></span></div>
+        <div class="cbox-cont">
+        	<h2>Error.</h2>
+            <div class="content">
+                <form action="" method="get">
+                    <p><label>&nbsp;</label></p>
+                    <p><label>&nbsp;Not a valid username/password.</label></p>
+                    <div class="cbox-foot">
+<%--                     	<input type="image" src="${imageUrl}scan-btn.png" alt="Scan" title="Scan" /> --%>
+				<span><a href="<c:url value="/logout"/>">Login Again</a></span>
+  		
+                    </div>
+                </form>
+            </div>                     
+        </div>
+      <div class="cbox-bottom"><span></span></div>
+  </div><!-- End: Container -->
+</div><!-- End Wrapper -->
+</sec:authorize>
+
+
+</body>
+</html>

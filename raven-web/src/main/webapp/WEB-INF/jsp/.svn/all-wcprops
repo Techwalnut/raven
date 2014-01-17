@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/17148/VistaSoftwares/speedoc/reliance/trunk/tools/status-web/src/main/webapp/WEB-INF/jsp
+END
+default.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/20802/VistaSoftwares/speedoc/reliance/trunk/tools/status-web/src/main/webapp/WEB-INF/jsp/default.jsp
+END
+loginPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/20802/VistaSoftwares/speedoc/reliance/trunk/tools/status-web/src/main/webapp/WEB-INF/jsp/loginPage.jsp
+END
+index.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/16754/VistaSoftwares/speedoc/reliance/trunk/tools/status-web/src/main/webapp/WEB-INF/jsp/index.jsp
+END
+reportList.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/20802/VistaSoftwares/speedoc/reliance/trunk/tools/status-web/src/main/webapp/WEB-INF/jsp/reportList.jsp
+END
+headerRP.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/20802/VistaSoftwares/speedoc/reliance/trunk/tools/status-web/src/main/webapp/WEB-INF/jsp/headerRP.jsp
+END
+loginhead.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/16754/VistaSoftwares/speedoc/reliance/trunk/tools/status-web/src/main/webapp/WEB-INF/jsp/loginhead.jsp
+END
+footer.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/16754/VistaSoftwares/speedoc/reliance/trunk/tools/status-web/src/main/webapp/WEB-INF/jsp/footer.jsp
+END
+headerLogin.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/16754/VistaSoftwares/speedoc/reliance/trunk/tools/status-web/src/main/webapp/WEB-INF/jsp/headerLogin.jsp
+END

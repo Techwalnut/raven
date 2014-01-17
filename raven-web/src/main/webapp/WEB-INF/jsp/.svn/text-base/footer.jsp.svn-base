@@ -1,0 +1,10 @@
+
+<div id="footer" class="clear"><!-- footer_inner starts-->
+<div id="footer_inner">
+<div class="foologo"><img src="../../images/f-logo.png" width="140"
+	height="45" /></div>
+<div class="fooaddress"><img src="../../images/f-address.png"
+	width="678" height="38" /></div>
+
+</div>
+<!-- footer_inner endss--></div>
