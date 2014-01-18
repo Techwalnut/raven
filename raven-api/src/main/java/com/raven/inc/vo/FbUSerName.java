@@ -1,6 +1,6 @@
 package com.raven.inc.vo;
 
-public class FbUSerName {
+public class FbUserName {
 
 	private String firstName;
 	private String middleName;

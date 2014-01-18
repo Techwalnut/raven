@@ -51,11 +51,9 @@ public class RavenRestaurantTest {
 				"\"accountType\":\"PERSONAL\",\"name\":{\"firstName\":\"Gaurav\"," +
 				"\"lastName\":\"Raj\"},\"address\":{\"line1\":\"123 Main St\",\"city\":\"New Delhi\"," +
 				"\"state\":\"Delhi\",\"postalCode\":\"834002\",\"country\":\"India\"}," +
-				"\"contactPhoneNumber\":\"512-555-5555\",\"dateOfBirth\":\"1985-01-26\"," +
+				"\"cellNo\":\"512-555-5555\",\"dob\":\"1985-01-26\"," +
 				"\"facebookAccountOptions\":{\"photoUrl\":\"http://www.example.com/abc.png\"," +
-				"\"facebookid\":\"abc111111\"},\"emailId\":\"gaurav@example.com\"," +
-				"\"preferredLanguageCode\":\"en_US\",\"registrationType\":\"iOS\"," +
-				"\"requestEnvelope\":{\"errorLanguage\":\"en_US\"}}");
+				"\"facebookId\":\"abc111111\"},\"emailId\":\"gaurav@example.com\"}");
 
 		entity = template
 				.postForEntity(

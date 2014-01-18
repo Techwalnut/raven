@@ -6,7 +6,7 @@ public class RavenUserVO {
 
 	private long id;
 	private String ravenId;
-	private FbUSerName name;
+	private FbUserName name;
 	private FbUserAddress address;
 	private FbUserAccountData facebookAccountOptions;
 	private String cellNo;
@@ -94,11 +94,11 @@ public class RavenUserVO {
 		return accountType;
 	}
 
-	public FbUSerName getName() {
+	public FbUserName getName() {
 		return name;
 	}
 
-	public void setName(FbUSerName name) {
+	public void setName(FbUserName name) {
 		this.name = name;
 	}
 	
