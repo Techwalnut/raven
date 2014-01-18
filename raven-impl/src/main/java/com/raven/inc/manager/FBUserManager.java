@@ -27,25 +27,21 @@ public class FBUserManager {
 	     int userCount=ravenUserDAO.isUserExist(ravenUserVO);
 	     if(userCount==0)
 	     {
-	    	 ravenUserVO= ravenUserDAO.saveRavenUser(ravenUserVO);
-	    	 
-	    	   RavenFbVO ravenFbVO=new RavenFbVO();
-	    	   ravenFbVO.setRavenUsrId(ravenUserVO.getRavenId());
+	    	 ravenUserVO = ravenUserDAO.saveRavenUser(ravenUserVO);
 	          
-	          
-	          int fbUserCount=ravFbDAO.findUserInRavenFb(ravenFbVO);
-	          if(fbUserCount==0)
+	         int fbUserCount=ravFbDAO.findUserInRavenFb(ravenUserVO);
+	         if(fbUserCount==0)
 	          {
-	        	 ravFbDAO.updateRavenUserId(ravenFbVO);  
+	        	 ravFbDAO.saveRavenFb(ravenUserVO);  
 	        	  
 	          }
 	          else
 	          {
 	        	  ArrayList<RavenFbVO> ravenFbVOList = new ArrayList<RavenFbVO>();
 	        	  for (RavenFbVO ravenFbVO2 : ravenFbVOList) {
-	        		  ravenFbVOList.add(ravenFbVO);
+	        		  //ravenFbVOList.add(ravenFbVO);
 				   }
-	        	  ravFbDAO.saveRavenFb(ravenFbVOList);
+	        	  //ravFbDAO.saveRavenFb(ravenFbVOList);
 	          }
 	          
 	     }

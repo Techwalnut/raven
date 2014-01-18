@@ -44,7 +44,7 @@ public class RavenRestaurantTest {
 
 		MultiValueMap<String, Object> parts = new LinkedMultiValueMap<String, Object>();
 
-		parts.add("id", "{\"emailId\":\"Sender-emailAddress\"," +
+		parts.add("fbUser", "{\"emailId\":\"Sender-emailAddress\"," +
 				"\"accountType\":\"PERSONAL\",\"name\":{\"firstName\":\"Gaurav\"," +
 				"\"lastName\":\"Raj\"},\"address\":{\"line1\":\"123 Main St\",\"city\":\"New Delhi\"," +
 				"\"state\":\"Delhi\",\"postalCode\":\"834002\",\"country\":\"India\"}," +

@@ -1,6 +1,7 @@
 package com.raven.inc.vo;
 
-import com.google.appengine.repackaged.com.google.common.base.Flag.Date;
+import java.sql.Date;
+
 
 public class RavenFbVO {
 	

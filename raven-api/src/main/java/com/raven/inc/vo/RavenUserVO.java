@@ -1,6 +1,7 @@
 package com.raven.inc.vo;
 
-import java.util.Date;
+import java.sql.Date;
+import java.util.List;
 
 public class RavenUserVO {
 
@@ -15,7 +16,7 @@ public class RavenUserVO {
 	private String status;
 	private Date createdDate;
 	private Date modifiedDate;
-	// private List<RavenFbVO> fbVOs;
+	private List<RavenFbVO> fbVOs;
 	private String accountType;
 
 	public long getId() {
@@ -82,10 +83,14 @@ public class RavenUserVO {
 		this.modifiedDate = modifiedDate;
 	}
 
-	/*
-	 * public void setFbVOs(List<RavenFbVO> fbVOs) { this.fbVOs = fbVOs; }
-	 * public List<RavenFbVO> getFbVOs() { return fbVOs; }
-	 */
+	public void setFbVOs(List<RavenFbVO> fbVOs) {
+		this.fbVOs = fbVOs;
+	}
+
+	public List<RavenFbVO> getFbVOs() {
+		return fbVOs;
+	}
+
 	public void setAccountType(String accountType) {
 		this.accountType = accountType;
 	}
@@ -101,7 +106,7 @@ public class RavenUserVO {
 	public void setName(FbUserName name) {
 		this.name = name;
 	}
-	
+
 	public void setAddress(FbUserAddress address) {
 		this.address = address;
 	}
@@ -110,14 +115,14 @@ public class RavenUserVO {
 		return address;
 	}
 
-	public void setFacebookAccountOptions(FbUserAccountData facebookAccountOptions) {
+	public void setFacebookAccountOptions(
+			FbUserAccountData facebookAccountOptions) {
 		this.facebookAccountOptions = facebookAccountOptions;
 	}
 
 	public FbUserAccountData getFacebookAccountOptions() {
 		return facebookAccountOptions;
 	}
-
 
 	@Override
 	public String toString() {
@@ -129,5 +134,4 @@ public class RavenUserVO {
 				+ modifiedDate + ", accountType=" + accountType + "]";
 	}
 
-	
 }
