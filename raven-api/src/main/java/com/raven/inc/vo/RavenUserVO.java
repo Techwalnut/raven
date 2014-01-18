@@ -7,6 +7,8 @@ public class RavenUserVO {
 	private long id;
 	private String ravenId;
 	private FbUSerName name;
+	private FbUserAddress address;
+	private FbUserAccountData facebookAccountOptions;
 	private String cellNo;
 	private String emailId;
 	private Date dob;
@@ -99,14 +101,33 @@ public class RavenUserVO {
 	public void setName(FbUSerName name) {
 		this.name = name;
 	}
+	
+	public void setAddress(FbUserAddress address) {
+		this.address = address;
+	}
+
+	public FbUserAddress getAddress() {
+		return address;
+	}
+
+	public void setFacebookAccountOptions(FbUserAccountData facebookAccountOptions) {
+		this.facebookAccountOptions = facebookAccountOptions;
+	}
+
+	public FbUserAccountData getFacebookAccountOptions() {
+		return facebookAccountOptions;
+	}
+
 
 	@Override
 	public String toString() {
 		return "RavenUserVO [id=" + id + ", ravenId=" + ravenId + ", name="
-				+ name + ", cellNo=" + cellNo + ", emailId=" + emailId
-				+ ", dob=" + dob + ", status=" + status + ", createdDate="
-				+ createdDate + ", modifiedDate=" + modifiedDate
-				+ ", accountType=" + accountType + "]";
+				+ name + ", address=" + address + ", facebookAccountOptions="
+				+ facebookAccountOptions + ", cellNo=" + cellNo + ", emailId="
+				+ emailId + ", dob=" + dob + ", status=" + status
+				+ ", createdDate=" + createdDate + ", modifiedDate="
+				+ modifiedDate + ", accountType=" + accountType + "]";
 	}
 
+	
 }
