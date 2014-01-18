@@ -37,10 +37,7 @@ public class RavenRestaurantTest {
 	@Test
 	public void TestFileUpload() {
 
-		//HttpHeaders headers = new HttpHeaders();
-		//headers.setContentType(MediaType.APPLICATION_JSON);
-		//headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-		
+				
 		RestTemplate template = new RestTemplate();
 
 		ResponseEntity<String> entity = null;
@@ -53,7 +50,8 @@ public class RavenRestaurantTest {
 				"\"state\":\"Delhi\",\"postalCode\":\"834002\",\"country\":\"India\"}," +
 				"\"cellNo\":\"512-555-5555\",\"dob\":\"1985-01-26\"," +
 				"\"facebookAccountOptions\":{\"photoUrl\":\"http://www.example.com/abc.png\"," +
-				"\"facebookId\":\"abc111111\"},\"emailId\":\"gaurav@example.com\"}");
+				"\"facebookId\":\"abc111111\"},\"emailId\":\"gaurav@example.com\"}," +
+				"\"requestEnvelope\":{\"errorLanguage\":\"en_US\"}}");
 
 		entity = template
 				.postForEntity(
@@ -62,8 +60,6 @@ public class RavenRestaurantTest {
 
 		System.out.println("Response Status" + entity.getStatusCode());
 		System.out.println("Response Message " + entity.getBody());
-		// System.out.println("Response " +
-		// entity.getBody().getResult().toString());
 	}
 
 }

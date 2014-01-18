@@ -1,5 +1,6 @@
 package com.raven.inc.controller;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +14,7 @@ import com.raven.inc.vo.RavenUserVO;
 
 @Controller
 @RequestMapping("/ravenusercontroller")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class FBUserController {
 
 	@Autowired
