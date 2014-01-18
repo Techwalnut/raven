@@ -20,18 +20,20 @@ public class FBUserController {
 
 	@RequestMapping(value = "/savefbuser", method = RequestMethod.POST)//, headers = {"Content-type=application/json"})
 	public @ResponseBody String saveFbUser(@RequestParam String id) {
-		System.out.println("********Controller " + id);
+		System.out.println("*****Json String :: " + id);
 		
 		try{
 			ObjectMapper mapper = new ObjectMapper();
+			
 			RavenUserVO ravenUserVO = mapper.readValue(id, RavenUserVO.class);	
 			System.out.println("ravenUserVO " + ravenUserVO.toString());
+			fbUserService.saveFbser(ravenUserVO);
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 		
-		//fbUserService.saveFbser(ravenUserVO);
+		
 		return "success";
 	}
 	
