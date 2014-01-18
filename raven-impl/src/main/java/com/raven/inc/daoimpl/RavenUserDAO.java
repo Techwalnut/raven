@@ -78,8 +78,8 @@ public class RavenUserDAO implements IRavenUserDAO {
 	public int isUserExist(RavenUserVO ravenUserVO) {
 
 		int userCount = jdbcTemplate
-				.queryForInt("select count(*) from raven_usr join raven_fb on raven_usr.raven_id=raven_fb.raven_usr_id where raven_usr.raven_id="
-						+ ravenUserVO.getRavenId() + " ");
+				.queryForInt("select count(*) from raven_usr join raven_fb on raven_usr.raven_id=raven_fb.raven_usr_id where fb_id="
+						+ ravenUserVO.getFacebookAccountOptions().getFacebookId() + " ");
 
 		return userCount;
 
